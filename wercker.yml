@@ -21,7 +21,7 @@ build:
         code: chmod 0400 $HOME/.ssh/id_rsa
     - script:
         name: gem install
-        code: sudo gem install serverspec --no-ri --no-rdoc
+        code: sudo gem install serverspec --pre --no-ri --no-rdoc
     - script:
         name: Get Vagrant
         code: wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
