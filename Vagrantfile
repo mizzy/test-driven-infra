@@ -30,4 +30,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       shell.args = "app"
     end
   end
+
+  config.vm.define :proxy do |c|
+    c.vm.provision :shell do |shell|
+      shell.path = "provision.sh"
+      shell.args = "proxy"
+    end
+  end
 end
