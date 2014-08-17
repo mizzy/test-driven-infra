@@ -17,6 +17,9 @@ build:
         hide-from-log: true
         content: $DIGITALOCEAN_SSH_KEY_PRIVATE
     - script:
+        name: exit 1
+        code: exit 1
+    - script:
         name: Run chmod 0400 $HOME/.ssh/id_rsa
         code: chmod 0400 $HOME/.ssh/id_rsa
     - script:
