@@ -7,9 +7,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     override.ssh.private_key_path = "~/.ssh/id_rsa"
     override.vm.box = "AndrewDryga/digital-ocean"
     provider.token  = ENV["DIGITALOCEAN_ACCESS_TOKEN"]
-    provider.image  = "CentOS 7.0 x64"
+    provider.image  = "centos-7-0-x64"
     provider.region = "sgp1"
-    provider.size   = "512MB"
+    provider.size   = "512mb"
 
     if ENV['WERCKER'] == "true"
       provider.ssh_key_name = "wercker"
